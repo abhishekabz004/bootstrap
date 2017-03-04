@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+    <script type="text/javascript">
+			function loadDiv() {
+				var div = document.getElementById('showHere');
+				div.innerHTML="<div class='new_div'>Hello World</div>";
+			}
+    </script>
+	<style>
+		div.facebook-comment{
+			image-url("css/Images/facebook-comment.png");		
+		}
+		div.twitter-comment{
+			image-url(css/Images/twitter-comment.png);		
+		}
+		div.box { width: 100px; overflow: auto; }
+		#contain-inside{ overflow:hidden;}
+		.vertical-center {
+			  align-items: center;
+		}
+		.grayscale {
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+			filter: gray; /* IE6-9 */
+			-webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+		}
+
+		.grayscale:hover {
+			filter: none;
+			-webkit-filter: grayscale(0%);
+		}
+
+		.grid{
+		  width: 30%;
+		  min-height: 150px;
+		  float: left;
+		  margin: 2px 0;
+		}
+		.gridr{
+		  width: 80%;
+		  min-height: 100px;
+		  float: right;
+		  margin: 2px 0;
+		}
+		
+		.hovereffect {
+		  width: 100%;
+		  height: 100%;
+		  float: left;
+		  
+		  position: relative;
+		  text-align: center;
+		  cursor: default;
+		}
+
+		.hovereffect .overlay {
+		  width: 100%;
+		  height: 100%;
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  -webkit-transition: all 0.4s ease-in-out;
+		  transition: all 0.4s ease-in-out;
+		}
+
+		.hovereffect:hover .overlay {
+		  background-color: rgba(170,170,170,0.4);
+		}
+
+		.hovereffect h2, .hovereffect img {
+		  -webkit-transition: all 0.4s ease-in-out;
+		  transition: all 0.4s ease-in-out;
+		}
+
+		.hovereffect img {
+		  display: block;
+		  position: relative;
+		  -webkit-transform: scale(1.1);
+		  -ms-transform: scale(1.1);
+		  transform: scale(1.1);
+		}
+
+		.hovereffect:hover img {
+		  -webkit-transform: scale(1);
+		  -ms-transform: scale(1);
+		  transform: scale(1);
+		}
+
+		.hovereffect h2 {
+		  text-transform: uppercase;
+		  color: #fff;
+		  text-align: center;
+		  position: relative;
+		  font-size: 17px;
+		  padding: 10px;
+		  background: rgba(0, 0, 0, 0.6);
+		}
+
+		.hovereffect a.info {
+		  display: inline-block;
+		  text-decoration: none;
+		  padding: 7px 14px;
+		  text-transform: uppercase;
+		  color: #fff;
+		  border: 1px solid #fff;
+		  margin: 50px 0 0 0;
+		  background-color: transparent;
+		  opacity: 0;
+		  filter: alpha(opacity=0);
+		  -webkit-transform: scale(1.5);
+		  -ms-transform: scale(1.5);
+		  transform: scale(1.5);
+		  -webkit-transition: all 0.4s ease-in-out;
+		  transition: all 0.4s ease-in-out;
+		  font-weight: normal;
+		  height: 85%;
+		  width: 85%;
+		  position: absolute;
+		  top: -20%;
+		  left: 8%;
+		  padding: 70px;
+		}
+
+		.hovereffect:hover a.info {
+		  opacity: 1;
+		  filter: alpha(opacity=100);
+		  -webkit-transform: scale(1);
+		  -ms-transform: scale(1);
+		  transform: scale(1);
+		  background-color: rgba(0,0,0,0.4);
+		}
+		
+		.bgimg{
+			 width: 200px;
+			 height: 200px;
+			 background-image: url('http://strawberry-fest.org/wp-content/uploads/2012/01/Coca-Cola-logo.jpg');
+			 background-size: cover;
+			 display: block;
+		}
+	</style>
+  </head>
+  <body>
+  
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar fixed-top navbar-inverse justify-content-between" style="background-color: #474a4f;>
+          <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+			  <a class="navbar-brand" href="#">
+				
+				Project Name
+			  </a>
+        </div>
+		
+        <div id="navbar" class="navbar-collapse collapse " >
+			<form class="navbar-form navbar-right ">
+			  <input class="form-control mr-sm-2" type="text" placeholder="Search">
+			</form>
+			<ul class="nav navbar-nav navbar-right">
+			
+			  <li class="nav-item">
+				<a class="nav-link" href="#trending">Trending</a>
+			  </li>
+			  <li class="nav-item dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Movies <span class="caret"></span></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Kollywood</a></li>
+					<li><a href="#">Hollywood</a></li>
+					<li><a href="#">Bollywood</a></li>
+
+				  </ul>
+
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="#">Leaderboard</a>
+			  </li>
+			</ul>
+			
+
+		</div>
+    </nav>
+
+      </div>
+    </div>
+
+    <div class="container marketing">
+
+
+		<div class="row featurette container">
+			<div class="row">
+				<div class="col-md-2" style=”float:left; background-color:magenta; width:100px; height:1000px; margin-top: 200px; margin-left: 100px;”>
+					
+							<img src="Images/BairavaaPoster.jpg" class="img-rounded" vertical-align: middle;  alt="Cinque Terre" width="184" height="277">
+				</div>
+				<div class="col-md-6" style=”float:left;  width:100px; height:1000px; margin-top: 200px; ”>
+							<h1>Bairavaa<br></h1>
+							<h6 class="text-muted">
+							<blockquote class="blockquote">
+								<p class="mb-0">A kind hearter bank officer decides to step in when an unscrupulous buisnessman tries to stop a college student from revealing the truth about his immoral activities.</p>
+							</blockquote>
+							</h6>
+							<div>
+								<a class="text-muted" href ="#" id="linkwrap" style="width:100px" >
+									<p> <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+									http://bairavaa.com</a>
+									</p>
+	
+							</div>
+							<div>
+								<a class="text-muted" href ="#" id="linkwrap" style="width:100px" >
+									<p><font face="Comic Sans MS" size="3" color="black"><strong>W</strong></font>
+									http://wikipedia.com/bairavaa</p>
+								</a>
+							</div>
+							<div >
+								<a href="https://twitter.com/">
+									<img src="Images/twitter.png" class="img-rounded grayscale"   alt="Cinque Terre" width="50" height="50">
+								</a>
+								<a href="https://www.facebook.com/">
+									<img src="Images/fb-icon.png" class="img-rounded grayscale"  alt="Cinque Terre" width="50" height="50">
+								</a>
+							</div>
+				</div>
+				<div class="col-md-4" style=”float:right; background-color:green; width:100px; height:1000px; margin-top: 100px; margin-left: 200px;”>
+				 <div class="w3-panel w3-card-8">
+								<h3 class="card-title">Cast And Crew</h4>
+								  
+								<ul class="list-group">
+
+										<li class="list-group-item">
+											<div class="row">
+											  <div class="col-sm-2"><img class="img-circle" src="Images/fb-icon.png " height="30" width="30" /></div>
+											  <div class="col-sm-8 text-center"><p>Samantha</p></div>
+											</div>
+										</li>
+
+										<li class="list-group-item">
+											<div class="row">
+											  <div class="col-sm-2"><img class="img-circle" src="Images/fb-icon.png " height="30" width="30" /></div>
+											  <div class="col-sm-8 text-center"><p>Nayanthara</p></div>
+											</div>
+										</li>
+
+										<li class="list-group-item">
+											<div class="row">
+											  <div class="col-sm-2"><img class="img-circle" src="Images/fb-icon.png " height="30" width="30" /></div>
+											  <div class="col-sm-8 text-center"><p>Hansika</p></div>
+											</div>
+										</li>
+								</ul>
+							 </div>
+				
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<div class="w3-card-8 col-md-5"; style="height: 500px; ">
+				
+				<header class="w3-container box"  style="height: 30%;background-color: #c6c5be;">
+						<div class=" row hovereffect">
+							<div class="col-xs-1  " >
+							<br>
+								<a href="#">
+									<img src="Images/vijay.jpg" class="img-circle " alt="Cinque Terre" width="100" height="100">
+									</a>
+							</div>
+							<div class="col-xs-5 gridr vertical-center" >
+							<br>
+								<h1 class="text-muted">
+									&nbsp;&nbsp;&nbsp;&nbsp;
+									<strong>Joseph Vijay</strong>
+								</h1>
+							</div>
+						</div>
+				</header>
+
+				<ul class="nav nav-pills nav-justified">
+				  <li role="presentation"><a href="javascript:loadDiv();">Semma</a></li>
+				  <li role="presentation"><a href="#">Theri</a></li>
+				  <li role="presentation"><a href="#">Wig</a></li>
+				</ul>
+				<div id="showHere" style="overflow-y: scroll; overflow : hidden; height: 60%; word-wrap: break-word; overflow : hidden;">
+					<div class="facebook-comment">
+						<!-- adsfasdflkjashdflkasdjf;lkasdjf -->asdfadf
+					</div>
+					<div class="twitter-comment">
+						<!-- sdfg;oiadjsfad;ofijasdf;oijadsf;oioaifj -->adsfadf
+					</div>
+				</div>
+				<div class="progress" style="height: 5%;"  >
+				  <div class="progress-bar progress-bar-success" role="progressbar" style="width :34%">
+					Positive
+				  </div>
+				  <div class="progress-bar progress-bar-danger" role="progressbar" style="width :66%">
+					Negative
+				  </div>
+				</div>
+			
+			</div>
+		</div>
+			
+		<div >
+			<hr class="featurette-divider">
+			<!-- FOOTER -->
+			<footer >
+			<div class="container">
+				<p class="pull-right"><a href="#">Back to top</a></p>
+				<p>&copy; 2016 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+			</div>
+			</footer>
+		<div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
